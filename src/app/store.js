@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { foodApi } from "../service/foodApi";
+import { foodApi } from "../services/foodApi";
 import inputSearchSlice from "../features/InputSearchSlice";
 export const store = configureStore({
   reducer: {

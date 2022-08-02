@@ -10,7 +10,7 @@ export const foodApi = createApi({
       query: (query) => `search.php?s=${query}`,
     }),
     detailFood: builder.query({
-      query: (key) => `recipe/${key}`,
+      query: (key) => `lookup.php?i=${key}`,
     }),
   }),
 });

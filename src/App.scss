@@ -1,4 +1,52 @@
-.container {
-    display: flex;
-    justify-content: center;
+html{
+    background-color: rgb(10, 25, 41);
 }
+.container {
+    max-width: 100vw;
+    max-height: 100vh;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{    
+    color: #E5E5E5;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    /* background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%); */
+    background: rgb(0, 0, 0, 0.3);
+    /* animasi */
+    transition-timing-function: ease-in;
+    transition: all 1s;
+    height: 50px;
+}
+
+.body {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-container{
+    max-width: fit-content;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    // max-width: 50vw;
+}
+
+.footer {
+    background-color: #4dd0e1;
+    margin-top: auto;
+}
+

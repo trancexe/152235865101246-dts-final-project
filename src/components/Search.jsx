@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import { useDispatch } from "react-redux";
 import { submitSearch } from "../features/InputSearchSlice";
+import Tooltip from "@mui/material/Tooltip";
 
 const Search = () => {
   const [searchValue, setSearchValue] = React.useState("");
@@ -31,21 +32,32 @@ const Search = () => {
           alignItems: "center",
           height: "fit-content",
           marginTop: "20px",
+          backgroundColor: "#474747",
         }}
         onSubmit={submitHandler}
       >
         <InputBase
-          sx={{ ml: 1 }}
+          sx={{ ml: 1, color: "#ababab" }}
           placeholder="Search"
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
         />
-        <IconButton type="submit" label="search">
-          <SearchIcon />
-        </IconButton>
-        <Button disabled={!searchValue} onClick={clearSearchResults}>
-          Clear
-        </Button>
+        <Tooltip title="Search">
+          <IconButton type="submit" label="search" sx={{ color: "#ababab" }}>
+            <SearchIcon />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="clear input">
+          <span>
+            <Button
+              disabled={!searchValue}
+              onClick={clearSearchResults}
+              sx={{ color: "#ababab" }}
+            >
+              Clear
+            </Button>
+          </span>
+        </Tooltip>
       </Paper>
     </>
   );
