@@ -4,7 +4,7 @@ import { auth } from "../authentication/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const Protected = ({ allowedRoute }) => {
-  const [user, isLoading] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const location = useLocation();
   // if (isLoading) {
   //   console.log("isloading", isLoading, "allowedRoute", allowedRoute);
