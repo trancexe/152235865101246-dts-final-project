@@ -9,25 +9,27 @@ const Protected = ({ allowedRoute }) => {
   // if (isLoading) {
   //   console.log("isloading", isLoading, "allowedRoute", allowedRoute);
   // }
-  console.log(
-    "isloading",
-    isLoading,
-    "allowedRoute",
-    allowedRoute,
-    "user",
-    user
-  );
+  // console.log(
+  //   "isloading",
+  //   isLoading,
+  //   "allowedRoute",
+  //   allowedRoute,
+  //   "user",
+  //   user
+  // );
 
   //  halaman detil
   // jika tidak ada user dan allowed = true maka redirect ke login
   if (!user && allowedRoute) {
-    console.log("redirect to login", location);
+    // console.log("redirect to login", location);
     return <Navigate to="/login" state={{ from: location }} replace={true} />;
   } else if (user && !allowedRoute) {
-    console.log("redirect to home", location);
+    // console.log("redirect to home", location);
     return <Navigate to="/" state={{ from: location }} replace={true} />;
   } else if (!user && !allowedRoute) {
     // return outet
+    return <Outlet />;
+  } else if (user && allowedRoute) {
     return <Outlet />;
   }
 
