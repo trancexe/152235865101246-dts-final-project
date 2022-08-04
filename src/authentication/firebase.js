@@ -27,6 +27,7 @@ const auth = getAuth(app);
 const registerWithEmailAndPassword = async (email, password) => {
   // user otomatis sign in oleh firebase
   try {
+    // eslint-disable-next-line no-unused-vars
     const getUser = await createUserWithEmailAndPassword(auth, email, password);
     // console.log("user yang tergis dan berhasil login adalah", getUser.user);
   } catch (error) {
@@ -38,6 +39,7 @@ const registerWithEmailAndPassword = async (email, password) => {
 // login
 const loginWithEmailAndPassword = async (email, password) => {
   try {
+    // eslint-disable-next-line no-unused-vars
     const userLogin = await signInWithEmailAndPassword(auth, email, password);
     // console.log("user yang berhasil login adalah", userLogin.user);
   } catch (error) {
@@ -49,6 +51,7 @@ const loginWithEmailAndPassword = async (email, password) => {
 // logout
 const logout = async () => {
   try {
+    // eslint-disable-next-line no-unused-vars
     const logout = await signOut(auth);
     // console.log("user berhasil logout", logout);
   } catch (error) {

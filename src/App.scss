@@ -10,18 +10,17 @@ html{
     flex-direction: column;
 }
 
-.header{    
+.header-container{    
     color: #E5E5E5;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 999;
-    /* background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%); */
+    background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%); 
     background: rgb(0, 0, 0, 0.3);
     /* animasi */
     transition-timing-function: ease-in;
     transition: all 1s;
-    height: 50px;
 }
 
 .body {
@@ -45,8 +44,21 @@ html{
     // max-width: 50vw;
 }
 
-.footer {
-    background-color: #4dd0e1;
-    margin-top: auto;
+
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
 }
 
